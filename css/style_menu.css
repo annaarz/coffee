@@ -1,0 +1,476 @@
+/* start */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--text-dark: #403f3d;
+	--text-light: #e1d4c9;
+	--text-accent: #b0907a;
+	--background-body: #e1d4c9;
+	--background-container: #665f55;
+	--background-backdrop: rgba(64, 63, 61, 0.8);
+	--border-light: #c1b6ad;
+	--border-dark: #665f55;
+}
+
+:root {
+    --font-family: "Inter", sans-serif;
+    --second-family: "Manrope", sans-serif;
+  }
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+body{
+    background-color: #E1D4C9;
+    font-family: "Inter", sans-serif;
+
+}
+/* header */
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #403F3D;
+    transition: .1s all ease;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+header button{
+    border-radius: 100px;
+    border: #E1D4C9;
+    cursor: pointer;
+    width: 200px;
+    height: 64px;
+    background-color: #E1D4C9;
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+header button:hover{
+    background-image: url(img/coffee-cup.png);
+    background-repeat: no-repeat;
+    transition: .1s all ease;
+    background-position: right 19% bottom 50%;
+}
+
+/* main text */
+.menu-main-text {
+    font-weight: 600;
+    font-size: 60px;
+    margin: 0 auto;
+    color: #403F3D;
+    max-width: 800px;
+    text-align: center;
+}
+
+.menu-main-text span {
+    font-style: italic;
+    color: #B0907A;
+}
+
+/* menu buttons */
+.menu-buttons {
+    margin: auto;
+    margin-top: 40px;
+    align-items: center;
+    max-width: 390px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.menu-button {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    column-gap: 8px;
+    font-weight: 600;
+    color: #403F3D;
+    border: 1px solid #C1B6AD;
+    padding: 8px;
+    border-radius: 50px;
+    padding-right: 16px;
+}
+
+.menu-button.active {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all;
+}
+
+
+.menu-button:hover{
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all;
+}
+
+
+/* menu coffee */
+
+.coffee-menu,
+.tea-menu,
+.dessert-menu {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.card {
+    border-radius: 40px;
+    background-color:#E1D4C9;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.01);
+    background-color:#665F55 ;
+    color:#E1D4C9 ;
+    transition: .4s all;
+}
+.card-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.price {
+    font-weight: 600;
+    font-size: 24px;
+}
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.856);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .8s;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.popup.opened{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content{
+    border-radius: 40px;
+    max-width: 800px;
+    gap: 20px;
+    background-color:#E1D4C9;
+    display: flex;
+    padding: 30px;
+    /* position: relative; */
+}
+
+.popup_name {
+    font-size: 24px;
+    color: #403F3D;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.popup_description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #403F3D;
+    margin-bottom: 20px;
+}
+
+.size {
+    margin-bottom: 20px;
+}
+
+.size-text {
+    margin-bottom: 8px;
+}
+
+.size-btn {
+    border-radius: 40px;
+    padding: 11px 16px 11px 8px;
+    background-color: #E1D4C9;
+    border: 1px solid #C1B6AD;
+    color: #403F3D;
+    font-weight: 600;
+    font-size: 16px;
+}
+.size-btn:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all;
+}
+.size-btn:focus{
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all; 
+}
+.size-btn span{
+    margin-right: 8px;
+    padding: 3px 8px;
+    /* height: 30px;
+    width: 30px; */
+    background-color:#C1B6AD;
+    border-radius: 100px;
+}
+
+.additives {
+    margin-bottom: 8px;
+}
+
+.additives-btn {
+    border-radius: 40px;
+    padding: 11px 16px 11px 8px;
+    background-color: #E1D4C9;
+    border: 1px solid #C1B6AD;
+    color: #403F3D;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.additives span{
+    margin-right: 8px;
+    padding: 3px 8px;
+    /* height: 30px;
+    width: 30px; */
+    background-color:#C1B6AD;
+    border-radius: 100px;
+}
+
+.additives-btn:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all;
+}
+
+.clicked{
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: .3s all;
+}
+
+.popup_total {
+    color: #403F3D;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.warning{
+    font-size: 10px;
+    border-top: #C1B6AD 1px solid;
+    font-weight: 600;
+    display: flex;
+    gap: 12px;
+    padding-top: 12px;
+}
+
+.warning img {
+    align-self: flex-start;
+}
+
+.close {
+    border: #403F3D 2px solid;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.close:hover {
+    color: #E1D4C9;
+    background-color: #403F3D;
+    transition: .4s all;
+    cursor: pointer;
+}
+/* footer */
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    padding: 100px;
+    background-color: #665F55;
+    border-radius: 40px;
+    flex-wrap: wrap;
+    column-gap: 100px;
+}
+
+.footer-text {
+    font-size: 60px;
+    color: #E1D4C9;
+    font-weight: 600;
+    /* max-width: 530px; */
+    margin-bottom: 40px;
+}
+.footer-text span {
+    font-style: italic;
+    color: #B0907A;
+}
+.socials {
+    display: flex;
+    column-gap: 12px;
+}
+.social:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.footer-second-column {
+    margin-top: 32px;
+}
+.contact-us {
+    color: #E1D4C9;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 40px;
+    align-items: flex-end;
+}
+
+.contact {
+    color: #E1D4C9;
+}
+.burger-btn{
+    background: url(../img/button-icon-burger.svg);
+    background-size: contain;
+    width: 44px;
+    height: 44px;
+  }
+  
+.burger, .burger-btn{
+    display: none;
+  }
+  
+  .burger ul{
+    flex-direction: column;
+  }
+  
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 150px 0px;
+    align-items: center;
+  }
+  
+
+@media(max-width: 768px){
+
+    .burger{
+        display: block;
+        position: fixed;
+        width: 100%;  
+        padding-bottom: 80px;
+        background: var(--text-light);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99;
+        box-shadow: 0 10px 10px 5px rgba(128, 128, 128, 0.174);
+      }
+      .burger.visible{
+        opacity: 1;
+        visibility: visible;
+      }
+      .logo{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0px 50px 0px;
+        align-items: center;
+      }
+      .menu{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+      .menu a{
+        margin: 30px 0px 30px 0px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 125%;
+        text-align: center;
+        color: var(--text-dark);
+        text-decoration: none;
+      }
+      .menu li{
+        list-style-type:none;
+        margin: 10px 0px;
+      
+      }
+      .menu_2{
+        padding: 100px 0px 0px 0px;
+      }
+    
+      
+      .desktop{
+        display: none;
+      }
+      
+      .enjoy h1{
+        padding-left: 60px;
+      }
+      
+      .enjoy p{
+        padding-left: 60px;
+      }
+      
+      .enjoy-button{
+        margin-left: 60px;
+      }
+    
+    
+      .burger-btn{
+        display: block;
+      }
+  
+  }
+  
+  @media (max-width: 490px) {
+    .menu-main-text, .footer-text{
+      font-size: 32px;
+      padding-top: 30px;
+    }
+
+    footer{
+        padding: 50px;
+    }
+  }

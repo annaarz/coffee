@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<body>
+    <header class="container">
+        <img src="img/logo.svg" alt="logo">
+        <nav>
+            <ul>
+                <li>Favorite coffee</li>
+                <li>About</li>
+                <li>Mobile app</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+        <button class="menu-button">Menu</button>
+    </header>
+    <main>
+        <div class="container enjoy">
+            <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
+            <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+            <button class="enjoy-button">Menu</button>
+        </div>
+        <div class="container carousel">
+            <h1>Choose your <span>favorite</span> coffee</h1>
+            <div class="sim-slider">
+                <ul class="sim-slider-list">
+                    <li class="sim-slider-element"><img src="img/coffee-slider-1.svg" alt="1"></li>
+                    <li class="sim-slider-element"><img src="img/coffee-slider-2.svg" alt="2"></li>
+                    <li class="sim-slider-element"><img src="img/coffee-slider-3.svg" alt="N"></li>
+                </ul>
+                <div class="sim-slider-arrow-left"></div>
+                <div class="sim-slider-arrow-right"></div>
+                <div class="sim-slider-dots"></div>
+            </div>
+            <div class="carousel-text">
+            <h3>S’mores Frappuccino</h3>
+            <p class="p-text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+            <p class="p-cost">$5.50</p>
+        </div>
+        </div>
+    </main>
+    <script src="sim-slider.js"></script>
+    <script>new Sim()</script>
+</body>
+</html>
