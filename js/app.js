@@ -211,20 +211,17 @@ if (clickedElement.matches('.close') || clickedElement.matches('#popup')) {
     }
 
     if (clickedElement.matches('#a-1')) {
-      document.getElementById('a-1').classList.add('clicked')
+      document.getElementById('a-1').classList.toggle('clicked')
     }
 
     if (clickedElement.matches('#a-2')) {
-      document.getElementById('a-2').classList.add('clicked')
+      document.getElementById('a-2').classList.toggle('clicked')
 
     }
 
     if (clickedElement.matches('#a-3')) {
-      document.getElementById('a-3').classList.add('clicked')
+      document.getElementById('a-3').classList.toggle('clicked')
     }
-
-
-
 
 })
 
